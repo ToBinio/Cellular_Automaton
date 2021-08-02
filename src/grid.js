@@ -43,7 +43,7 @@ var grid = /** @class */ (function () {
         var _this = this;
         this.canvas.width = window.innerWidth * 0.8;
         this.canvas.height =
-            (window.innerHeight - document.getElementById("top").clientHeight) * 0.8;
+            window.innerHeight - document.getElementById("top").clientHeight - 60;
         var cellSize = this.gridcellSizer();
         //add rows
         if (this.gridArray.length < cellSize[0])
