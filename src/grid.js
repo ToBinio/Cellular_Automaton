@@ -36,7 +36,7 @@ var grid = /** @class */ (function () {
         var width = Math.round(this.canvas.width / cellSize);
         this.canvas.height = height * cellSize;
         this.canvas.width = width * cellSize;
-        document.getElementById("cellCount").innerText = "Cell count:\n     " + height * width;
+        document.getElementById("cellCount").innerText = "Cell count: " + height * width;
         return [height, width];
     };
     grid.prototype.createGrid = function () {
@@ -102,7 +102,6 @@ var grid = /** @class */ (function () {
     grid.prototype.fillBackground = function () {
         var canvasContext = this.canvasContext;
         canvasContext.fillStyle = "#b7bcb6";
-        canvasContext.fillStyle = "black";
         canvasContext.fillRect(0, 0, this.canvas.width, this.canvas.height);
     };
     grid.prototype.computeNextGrid = function () {

@@ -13,20 +13,29 @@
     <h1>Game Of Life</h1>
     <hr />
     <div class="settings">
-        <button id="nextButton">next Step</button>
-        <button id="resetButton">reset</button>
-        <input type="checkbox" id="autoPlayChecker" /> autoPlay
-        <span id="cellCount">cellCount:</span>
-        <span>
-        Boarder
-        <input type="color" id="boarderColor" />
-        <input type="range" id="boarderWidth" min="0" max="1" step="0.01" />
-      </span>
-        <span>Cells
-        <input type="color" id="aliveCellColor" />
-        <input type="color" id="deadCellColor" />
-        <input type="range" id="cellSize" min="2" max="75" step="1" />
-      </span>
+        <div style="width: 150px">
+            <div>
+                <button id="nextButton">next Step</button>
+                <button id="resetButton">reset</button>
+            </div>
+            <div><input type="checkbox" id="autoPlayChecker" /> autoPlay</div>
+            <div>
+                <span id="cellCount">cellCount:</span>
+            </div>
+        </div>
+        <div style="width: 200px">
+            <div class="centerText">Boarder</div>
+            <div>
+                <input type="color" id="boarderColor" />
+                <input type="range" id="boarderWidth" min="0" max="1" step="0.01" />
+            </div>
+        </div>
+        <div style="width: 105px">
+            <div class="centerText">Cells</div>
+            <input type="color" id="aliveCellColor" />
+            <input type="color" id="deadCellColor" />
+            <input style="width: 100px" type="range" id="cellSize" min="2" max="75" step="1" />
+        </div>
     </div>
     <hr />
     <div>

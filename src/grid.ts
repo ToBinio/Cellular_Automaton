@@ -65,8 +65,9 @@ export class grid {
     this.canvas.height = height * cellSize;
     this.canvas.width = width * cellSize;
 
-    document.getElementById("cellCount")!.innerText = `Cell count:
-     ${height * width}`;
+    document.getElementById("cellCount")!.innerText = `Cell count: ${
+      height * width
+    }`;
     return [height, width];
   }
   createGrid() {
@@ -144,7 +145,6 @@ export class grid {
     let canvasContext = this.canvasContext;
 
     canvasContext.fillStyle = "#b7bcb6";
-    canvasContext.fillStyle = "black";
     canvasContext.fillRect(0, 0, this.canvas.width, this.canvas.height);
   }
 
