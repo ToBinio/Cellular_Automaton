@@ -16,16 +16,29 @@ document.getElementById("resetButton").addEventListener("click", function () {
 });
 //outoPlay
 var timer;
+var timeDealy = 100;
+var timeDealyObj = document.getElementById("autplayTime");
+timeDealyObj.value = Math.sqrt(timeDealy).toString();
+timeDealyObj.addEventListener("change", function () {
+    timeDealy = Math.pow(parseFloat(timeDealyObj.value), 2);
+    if (document.getElementById("autoPlayChecker").checked) {
+        clearInterval(timer);
+        startTimer();
+    }
+});
 document
     .getElementById("autoPlayChecker")
     .addEventListener("change", function () {
     if (document.getElementById("autoPlayChecker").checked) {
-        timer = setInterval(function () {
-            gridObj.computeNextGrid();
-            gridObj.draw();
-        }, 100);
+        startTimer();
     }
     else {
         clearInterval(timer);
     }
 });
+function startTimer() {
+    timer = setInterval(function () {
+        gridObj.computeNextGrid();
+        gridObj.draw();
+    }, timeDealy);
+}

@@ -40,8 +40,8 @@ export class grid {
           this.canvasContext.fillRect(
             columnIndex * cellSize,
             rowIndex * cellSize,
-            cellSize,
-            cellSize
+            cellSize + 0.5,
+            cellSize + 0.5
           );
         }
 

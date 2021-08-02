@@ -22,7 +22,7 @@ var grid = /** @class */ (function () {
                     else {
                         _this.canvasContext.fillStyle = deadCellColor;
                     }
-                    _this.canvasContext.fillRect(columnIndex * cellSize, rowIndex * cellSize, cellSize, cellSize);
+                    _this.canvasContext.fillRect(columnIndex * cellSize, rowIndex * cellSize, cellSize + 0.5, cellSize + 0.5);
                 }
                 if (boarderWidth != 0) {
                     //drawing grid

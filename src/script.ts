@@ -28,6 +28,20 @@ document.getElementById("resetButton")!.addEventListener("click", function () {
 
 //outoPlay
 let timer: number;
+let timeDealy = 100;
+
+let timeDealyObj = document.getElementById("autplayTime")! as HTMLInputElement;
+
+timeDealyObj.value = Math.sqrt(timeDealy).toString();
+timeDealyObj.addEventListener("change", function () {
+  timeDealy = Math.pow(parseFloat(timeDealyObj.value), 2);
+  if (
+    (document.getElementById("autoPlayChecker")! as HTMLInputElement).checked
+  ) {
+    clearInterval(timer);
+    startTimer();
+  }
+});
 
 document
   .getElementById("autoPlayChecker")!
@@ -35,11 +49,15 @@ document
     if (
       (document.getElementById("autoPlayChecker")! as HTMLInputElement).checked
     ) {
-      timer = setInterval(function () {
-        gridObj.computeNextGrid();
-        gridObj.draw();
-      }, 100);
+      startTimer();
     } else {
       clearInterval(timer);
     }
   });
+
+function startTimer() {
+  timer = setInterval(function () {
+    gridObj.computeNextGrid();
+    gridObj.draw();
+  }, timeDealy);
+}

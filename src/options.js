@@ -1,10 +1,10 @@
 import { gridObj } from "./script.js";
-export var cellSize = 25;
+export var cellSize = 40;
 var cellSizeObj = document.getElementById("cellSize");
-cellSizeObj.value = cellSize.toString();
+cellSizeObj.value = Math.sqrt(cellSize).toString();
 cellSizeObj.addEventListener("change", function () {
-    cellSize = parseFloat(cellSizeObj.value);
-    boarderWidth = (parseFloat(boarderNumberObj.value) * cellSize) / 2;
+    cellSize = Math.pow(parseFloat(cellSizeObj.value), 2);
+    boarderWidth = Math.pow(parseFloat(boarderNumberObj.value), 2) * cellSize;
     gridObj.createGrid();
     gridObj.draw();
 });
@@ -23,11 +23,12 @@ deadCellColorObj.addEventListener("change", function () {
     gridObj.draw();
 });
 //boarder settings
-export var boarderWidth = 0.3;
+export var boarderWidth = 0;
 var boarderNumberObj = document.getElementById("boarderWidth");
-boarderNumberObj.value = (boarderWidth / 2).toString();
+boarderNumberObj.value = "0";
 boarderNumberObj.addEventListener("change", function () {
-    boarderWidth = (parseFloat(boarderNumberObj.value) * cellSize) / 2;
+    boarderWidth = Math.pow(parseFloat(boarderNumberObj.value), 2) * cellSize;
+    console.log(boarderWidth);
     gridObj.draw();
 });
 export var boarderColor = "#000000";
