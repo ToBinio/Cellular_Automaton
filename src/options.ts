@@ -75,3 +75,25 @@ export let lifeOptions = [
   lifeEvent.death,
   lifeEvent.death,
 ];
+
+function lifeEventFromString(text: string): lifeEvent {
+  switch (text) {
+    case "survie":
+      return lifeEvent.survival;
+    case "birth":
+      return lifeEvent.birth;
+    default:
+      return lifeEvent.death;
+  }
+}
+
+for (let index = 1; index < 9; index++) {
+  document
+    .getElementById(`neighbour${index}`)!
+    .addEventListener("change", function () {
+      lifeOptions[index] = lifeEventFromString(
+        (document.getElementById(`neighbour${index}`)! as HTMLInputElement)
+          .value
+      );
+    });
+}

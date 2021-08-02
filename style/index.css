@@ -8,18 +8,43 @@
 .settings {
     position: relative;
     display: grid;
-    grid-template-columns: min-content min-content min-content;
+    grid-template-columns: min-content min-content min-content min-content;
     column-gap: 25px;
     row-gap: 25px;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 820px) {
+    .settings {
+        grid-template-columns: min-content min-content min-content;
+        grid-template-rows: min-content min-content;
+    }
+}
+
+@media screen and (max-width: 700px) {
     .settings {
         grid-template-columns: min-content min-content;
         grid-template-rows: min-content min-content;
     }
 }
 
+@media screen and (max-width: 520px) {
+    .settings {
+        grid-template-columns: min-content;
+        grid-template-rows: min-content min-content min-content min-content;
+    }
+}
+
 .centerText {
     text-align: center;
+}
+
+.neighbours {
+    display: grid;
+    grid-template-columns: min-content min-content min-content min-content;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.neighbours select {
+    width: 67px;
 }

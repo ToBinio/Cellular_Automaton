@@ -19,11 +19,73 @@
                     <button id="nextButton">next Step</button>
                     <button id="resetButton">reset</button>
                 </div>
-                <div><input type="checkbox" id="autoPlayChecker" /> autoPlay</div>
-                <input type="range" id="autplayTime" min="7" max="31" step="0.5" />
-
+                <div>
+                    <input type="checkbox" id="autoPlayChecker" /> autoPlay
+                    <input style="width: 30px" type="range" id="autplayTime" min="7" max="31" step="0.5" />
+                </div>
                 <div>
                     <span id="cellCount">cellCount:</span>
+                </div>
+            </div>
+            <div>
+                <div class="centerText">1 → neighbours → 8</div>
+                <div class="neighbours">
+                    <select id="neighbour1">
+              <optgroup label="1">
+                <option value="death" selected>Death</option>
+                <option value="survive">Survive</option>
+                <option value="birth">Birth</option>
+              </optgroup>
+            </select>
+                    <select id="neighbour2">
+              <optgroup label="2">
+                <option value="death">Death</option>
+                <option value="survive" selected>Survive</option>
+                <option value="birth">Birth</option>
+              </optgroup>
+            </select>
+                    <select id="neighbour3">
+              <optgroup label="3">
+                <option value="death">Death</option>
+                <option value="survive">Survive</option>
+                <option value="birth" selected>Birth</option>
+              </optgroup>
+            </select>
+                    <select id="neighbour4">
+              <optgroup label="4">
+                <option value="death">Death</option>
+                <option value="survive">Survive</option>
+                <option value="birth">Birth</option>
+              </optgroup>
+            </select>
+                    <select id="neighbour5">
+              <optgroup label="5">
+                <option value="death">Death</option>
+                <option value="survive">Survive</option>
+                <option value="birth">Birth</option>
+              </optgroup>
+            </select>
+                    <select id="neighbour6">
+              <optgroup label="6">
+                <option value="death">Death</option>
+                <option value="survive">Survive</option>
+                <option value="birth">Birth</option>
+              </optgroup>
+            </select>
+                    <select id="neighbour7">
+              <optgroup label="7">
+                <option value="death">Death</option>
+                <option value="survive">Survive</option>
+                <option value="birth">Birth</option>
+              </optgroup>
+            </select>
+                    <select id="neighbour8">
+              <optgroup label="8">
+                <option value="death">Death</option>
+                <option value="survive">Survive</option>
+                <option value="birth">Birth</option>
+              </optgroup>
+            </select>
                 </div>
             </div>
             <div style="width: 200px">

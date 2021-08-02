@@ -65,7 +65,7 @@ export class grid {
     this.canvas.height = height * cellSize;
     this.canvas.width = width * cellSize;
 
-    document.getElementById("cellCount")!.innerText = `Cell count: ${
+    document.getElementById("cellCount")!.innerText = `Cell's: ${
       height * width
     }`;
     return [height, width];

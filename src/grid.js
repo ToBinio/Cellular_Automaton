@@ -36,7 +36,7 @@ var grid = /** @class */ (function () {
         var width = Math.round(this.canvas.width / cellSize);
         this.canvas.height = height * cellSize;
         this.canvas.width = width * cellSize;
-        document.getElementById("cellCount").innerText = "Cell count: " + height * width;
+        document.getElementById("cellCount").innerText = "Cell's: " + height * width;
         return [height, width];
     };
     grid.prototype.createGrid = function () {

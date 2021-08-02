@@ -56,3 +56,24 @@ export var lifeOptions = [
     lifeEvent.death,
     lifeEvent.death,
 ];
+function lifeEventFromString(text) {
+    switch (text) {
+        case "survie":
+            return lifeEvent.survival;
+        case "birth":
+            return lifeEvent.birth;
+        default:
+            return lifeEvent.death;
+    }
+}
+var _loop_1 = function (index) {
+    document
+        .getElementById("neighbour" + index)
+        .addEventListener("change", function () {
+        lifeOptions[index] = lifeEventFromString(document.getElementById("neighbour" + index)
+            .value);
+    });
+};
+for (var index = 1; index < 9; index++) {
+    _loop_1(index);
+}
