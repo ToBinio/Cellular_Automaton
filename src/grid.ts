@@ -144,6 +144,7 @@ export class grid {
     let canvasContext = this.canvasContext;
 
     canvasContext.fillStyle = "#b7bcb6";
+    canvasContext.fillStyle = "black";
     canvasContext.fillRect(0, 0, this.canvas.width, this.canvas.height);
   }
 

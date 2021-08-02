@@ -102,6 +102,7 @@ var grid = /** @class */ (function () {
     grid.prototype.fillBackground = function () {
         var canvasContext = this.canvasContext;
         canvasContext.fillStyle = "#b7bcb6";
+        canvasContext.fillStyle = "black";
         canvasContext.fillRect(0, 0, this.canvas.width, this.canvas.height);
     };
     grid.prototype.computeNextGrid = function () {
