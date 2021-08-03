@@ -78,7 +78,7 @@ export let lifeOptions = [
 
 function lifeEventFromString(text: string): lifeEvent {
   switch (text) {
-    case "survie":
+    case "survive":
       return lifeEvent.survival;
     case "birth":
       return lifeEvent.birth;

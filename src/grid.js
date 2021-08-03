@@ -135,7 +135,7 @@ var grid = /** @class */ (function () {
     return grid;
 }());
 export { grid };
-var state;
+export var state;
 (function (state) {
     state[state["alive"] = 0] = "alive";
     state[state["newDead"] = 1] = "newDead";

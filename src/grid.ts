@@ -177,7 +177,7 @@ export class grid {
   }
 }
 
-enum state {
+export enum state {
   alive,
   newDead,
   dead,
